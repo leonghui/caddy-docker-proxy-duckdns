@@ -3,7 +3,8 @@ FROM caddy:builder-alpine AS builder
 RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
     --with github.com/caddy-dns/duckdns \
-    --with github.com/mholt/caddy-dynamicdns
+    --with github.com/mholt/caddy-dynamicdns \
+    --with github.com/mholt/caddy-l4
 
 FROM caddy:alpine
 
